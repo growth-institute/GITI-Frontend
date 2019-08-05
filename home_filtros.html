@@ -8,21 +8,18 @@
 		<!-- <link rel="StyleSheet" href="home.css" /> -->
 		<link rel="StyleSheet" href="styles/css/chimplate.css" />
 		<link rel="StyleSheet" href="styles/css/filters.css" />
-		<script
-		src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-		crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
-		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 		<script src="scripts/isotope.pkgd.js"></script>
-		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> -->
-		<script src="scripts/filters.js"></script>
-
-		<!-- Add your custom HEAD content here -->
+        <script src="scripts/filters.js"></script>
 
     </head>
     <body>
-		home 2 chimplate
+        home 2 chimplate
+        <h1>Isotope - filtering</h1>
+
+        
+        
 		<section class="section section-form">
 		<div class="content">
 			<div class="inner ">
@@ -37,10 +34,14 @@
 						</div>
 						<div class="row row-md row-sm row-10  ">
 							<div class="col col-7 col-md-7 col-sm-12">
-									<img src="imgs/filters1.png"  class="img-responsive">
+									<div class="button-group filters-button-group">
+                                    <button class="button is-checked"  data-filter="*">show all</button>
+                                    <button class="button" id="btn1" data-filter=".suc">Scaling Up Club </button>
+                                    <button class="button" data-filter=".mbc">Master Business Couurses </button>
+                                    </div>
 							</div>
 							<div class="col col-5 col-md-5 col-sm-12">
-									<img src="imgs/filters2.png"  class="img-responsive">
+                                    <input class="quicksearch" type="text" name="search" id="search-query" placeholder="Search for content">
 							</div>	
 						</div>
 						
@@ -50,11 +51,11 @@
 				<div class="inner boxfix-vert">
 						<div class="margins-horz">
 							<div class="row row-md">
-								<div class="col col-5 col-md-5 metal">
-										<img src="imgs/title1.png"  class="img-responsive metal">
+								<div class="col col-5 col-md-5 ">
+										<img src="imgs/title1.png"  class="img-responsive">
 								</div>
-								<div class="col col-7 col-md-7 alkali" >
-										<img src="imgs/line1.png"  class="img-responsive alkali">
+								<div class="col col-7 col-md-7 " >
+										<img src="imgs/line1.png"  class="img-responsive">
 								</div>
 							</div>
 						</div>
@@ -62,11 +63,11 @@
 
 				<div class="inner boxfix-vert">
 					<div class="margins-horz">	  
-						<div class="row row-md grid">
-							<div class="col col-6 col-md-6 grid-item">
+						<div class="row row-md filterc">
+							<div class="col col-6 col-md-6 eitem mbc">
 									<img src="imgs/mbc1.png"  class="img-responsive">
 							</div>
-							<div class="col col-6 col-md-6 grid-item">
+							<div class="col col-6 col-md-6 eitem mbc">
 									<img src="imgs/mbc2.png"  class="img-responsive">
 							</div>
 						</div>
@@ -87,17 +88,17 @@
 				</div>
 				<div class="inner boxfix-vert">
 					<div class="margins-horz">
-						<div class="row row-md">
-							<div class="col col-3 col-md-6 col-sm-12">
+						<div class="row row-md filterc">
+							<div class="col col-3 col-md-6 col-sm-12 eitem suc">
 									<img src="imgs/ls1.png"  class="img-responsive">
 							</div>
-							<div class="col col-3 col-md-6 col-sm-12">
+							<div class="col col-3 col-md-6 col-sm-12 eitem suc">
 									<img src="imgs/ls2.png"  class="img-responsive">
 							</div>
-							<div class="col col-3 col-md-6 col-sm-12">
+							<div class="col col-3 col-md-6 col-sm-12 eitem suc">
 								<img src="imgs/ls1.png"  class="img-responsive">
 							</div>
-							<div class="col col-3 col-md-6 col-sm-12">
+							<div class="col col-3 col-md-6 col-sm-12 eitem suc">
 								<img src="imgs/ls2.png"  class="img-responsive">
 							</div>
 						</div>
