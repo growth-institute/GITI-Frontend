@@ -1,7 +1,15 @@
 $( document ).ready(function() {
+    var qsRegex;
+    var buttonFilter;
     var $grid = $('.filterc').isotope({
         itemSelector: '.eitem',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
+        filter: function() {
+            var $this = $(this);
+            var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+            var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+            return searchResult && buttonResult;
+          }
       });
     console.log( "ready2!" );
    
@@ -28,26 +36,23 @@ $( document ).ready(function() {
             $( this ).addClass('is-checked');
         });
     });
+
+    // debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+    var timeout;
+    threshold = threshold || 100;
+    return function debounced() {
+      clearTimeout( timeout );
+      var args = arguments;
+      var _this = this;
+      function delayed() {
+        fn.apply( _this, args );
+      }
+      timeout = setTimeout( delayed, threshold );
+    };
+  }
 });
 
-// init Isotope
-// var $grid = $('.grid').isotope({
-//   itemSelector: '.element-item',
-//   layoutMode: 'fitRows'
-// });
-// filter functions
-// var filterFns = {
-//   // show if number is greater than 50
-//   numberGreaterThan50: function() {
-//     var number = $(this).find('.number').text();
-//     return parseInt( number, 10 ) > 50;
-//   },
-//   // show if name ends with -ium
-//   ium: function() {
-//     var name = $(this).find('.name').text();
-//     return name.match( /ium$/ );
-//   }
-// };
 
 
 
