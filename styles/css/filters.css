@@ -49,7 +49,7 @@ body {
 /* ---- button-group ---- */
 .button-group {
 
-    margin: 25px 10px;
+    padding-top: 10px;
   }
 
 
@@ -68,6 +68,10 @@ body {
   margin-right: 1px;
 }
 
+ .hide {
+
+  display: none;
+}
 
 
 /* .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }

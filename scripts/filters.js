@@ -12,13 +12,21 @@ $( document ).ready(function() {
           }
       });
     console.log( "ready2!" );
+    // use value of search field to filter
+    var $quicksearch = $('#quicksearch').keyup( debounce( function() {
+      qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+      $grid.isotope();
+    }) );
    
     $("#btn1").on( 'click',  function() {
-    // console.log("boton click1");
-    //  $grid.isotope({ filter: '.metal' });
+      $("#bchild1").removeClass("hide");
+    });
+    
+    $("#btn2, #btnall").on( 'click',  function() {
+      $("#bchild1").addClass("hide");
     });
     // bind filter button click
-    $('button').on( 'click', function() {
+    $('.filters-button-group').on( 'click', 'button', function() {
         console.log("boton click3");
       var filterValue = $( this ).attr('data-filter');
         console.log(filterValue);
