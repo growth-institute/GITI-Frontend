@@ -31,18 +31,24 @@
 						<div class="row row-md row-sm row-10" id="filters">
 							<div class="col col-7 col-md-7 col-sm-12">
 									<div class="button-group filters-button-group">
-                                    <button id="btnall" class="button is-checked"  data-filter="*">show all</button>
-                                    <button id="btn1" class="button" data-filter=".suc">Scaling Up Club </button>
-                                    <button id="btn2" class="button" data-filter=".mbc">Master Business Couurses </button>
-                                    </div>
+										<button id="btnall" class="button is-checked"  data-filter="*">show all</button>
+										<button id="btn1" class="button" data-filter=".suc">Scaling Up Club </button>
+										<button id="btn2" class="button" data-filter=".mbc">Master Business Couurses </button>
+									</div>
+									<div class="button-group filters-button-group hide" id="bchild1">
+										<button id="btnc" class="button"  data-filter=".comp">Competencies</button>
+										<button id="btnp" class="button" id="btn1" data-filter=".path">Pathways</button>
+										<button id="btnl" class="button" data-filter=".lc">Legacy Content</button>
+									</div>
+									<div class="button-group filters-button-group hide" id="bchild2">
+										<button class="button"  data-filter=".comp">Strategy</button>
+										<button class="button" id="btn1" data-filter=".path">Marketing</button>
+										<button class="button" data-filter=".lc">Sales</button>
+										<button class="button"  data-filter=".comp">Leadership</button>
+										<button class="button" id="btn1" data-filter=".path">Execution</button>
+										<button class="button" data-filter=".lc">Culture</button>
+									</div>
 							</div>
-							<div class="col col-7 col-md-7 col-sm-12">
-								<div class="button-group filters-button-group hide" id="bchild1">
-								<button class="button"  data-filter=".comp">Competencies</button>
-								<button class="button" id="btn1" data-filter=".path">Pathways</button>
-								<button class="button" data-filter=".lc">Legacy Content</button>
-								</div>
-						</div>
 							<div class="col col-5 col-md-5 col-sm-12">
                                     <input class="quicksearch" type="text" name="search" id="quicksearch"  placeholder="Search for content">
 							</div>	
@@ -127,12 +133,14 @@
 				</div>	
 				<div class="inner boxfix-vert">
 					<div class="margins-horz">
-						<div class="row row-md">
-							<div class="col col-6 col-md-6">
+						<div class="row row-md  filterc">
+							<div class="col col-6 col-md-6 eitem path">
 									<img src="imgs/lp1.png"  class="img-responsive">
+									<div class="hide"> lp1</div>
 							</div>
-							<div class="col col-6 col-md-6">
+							<div class="col col-6 col-md-6 eitem path">
 									<img src="imgs/lp2.png"  class="img-responsive">
+									<div class="hide"> lp2</div>
 							</div>
 						</div>
 					</div>

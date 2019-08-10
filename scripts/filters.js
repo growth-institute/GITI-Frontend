@@ -25,6 +25,14 @@ $( document ).ready(function() {
     $("#btn2, #btnall").on( 'click',  function() {
       $("#bchild1").addClass("hide");
     });
+
+    $("#btnc").on( 'click',  function() {
+      $("#bchild2").removeClass("hide");
+    });
+
+    $("#btn2, #btnall, #btnp, #btnl").on( 'click',  function() {
+      $("#bchild2").addClass("hide");
+    });
     // bind filter button click
     $('.filters-button-group').on( 'click', 'button', function() {
         console.log("boton click3");
